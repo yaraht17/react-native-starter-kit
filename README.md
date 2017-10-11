@@ -33,3 +33,15 @@ React Native Start Kit
 
 index.js                AppRegistry (RN 0.49+)
 ```
+
+# Install 
+```
+$ git clone https://github.com/yaraht17/react-native-starter-kit.git
+$ cd react-native-starter-kit
+$ npm install 
+$ react-native link //if need)
+$ react-native run-ios //(with ios)
+$ react-native run-android //(with android)
+```
+
+Happy Coding!

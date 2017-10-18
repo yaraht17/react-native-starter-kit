@@ -44,5 +44,7 @@ suppress_comment=\\(.\\|\n\\)*\\$FlowExpectedError
 
 unsafe.enable_getters_and_setters=true
 
+module.name_mapper='^{rootPathPrefix}/\(.*\)$' -> '<PROJECT_ROOT>{rootPathSuffix}/\1'
+
 [version]
 ^0.53.0

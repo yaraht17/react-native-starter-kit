@@ -10,6 +10,13 @@ export const AppNavigator = StackNavigator({
   Splash: { screen: Splash },
   Login: { screen: Login },
   Home: { screen: Home },
-});
+},
+  {
+    initialRouteName: 'Splash',
+    // navigationOptions: {
+    //   header: null,
+    // },
+  }
+);
 
 export default AppNavigator;

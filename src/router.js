@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
 import { addNavigationHelpers, StackNavigator } from 'react-navigation';
 
 import Splash from './container/Splash';
@@ -13,17 +12,4 @@ export const AppNavigator = StackNavigator({
   Home: { screen: Home },
 });
 
-const AppWithNavigationState = ({ dispatch, navigation }) => (
-  <AppNavigator navigation={addNavigationHelpers({ dispatch, state: navigation })} />
-);
-
-AppWithNavigationState.propTypes = {
-  dispatch: PropTypes.func.isRequired,
-  nav: PropTypes.object.isRequired,
-};
-
-const mapStateToProps = state => ({
-  navigation: state.navigation,
-});
-
-export default connect(mapStateToProps)(AppWithNavigationState);
+export default AppNavigator;

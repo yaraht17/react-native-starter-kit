@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import {
   View,
-  Text
+  Text,
+  StyleSheet,
+  TouchableOpacity,
 } from 'react-native';
 
 export default class Login extends Component {
@@ -9,6 +11,11 @@ export default class Login extends Component {
     return (
       <View>
         <Text>Login</Text>
+        <TouchableOpacity
+          onPress={() => this.props.navigation.navigate('Home')}
+        >
+          <Text>Go to home</Text>
+        </TouchableOpacity>
       </View>
     );
   }

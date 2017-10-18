@@ -1,3 +1,4 @@
+import { AsyncStorage } from 'react-native';
 import { createStore, applyMiddleware, compose } from 'redux';
 import logger from 'redux-logger';
 import thunk from 'redux-thunk';
@@ -13,7 +14,7 @@ const middleware = [sagaMiddleware, thunk];
 if (process.env.NODE_ENV === 'development') {
   middleware.push(logger);
 }
-const enhancer = [autoRehydrate(), applyMiddleware(...middlewares)];
+const enhancer = [autoRehydrate(), applyMiddleware(...middleware)];
 
 const store = createStore(reducer, {}, compose(...enhancer));
 
@@ -26,7 +27,7 @@ persistStore(
     // debounce: 500,
     // blacklist: ['form', 'ui', 'requests', 'toast'] 
   },
-  () => callback(store)
+  null
 );
 
 export default store;

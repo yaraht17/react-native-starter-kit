@@ -18,16 +18,23 @@ React Native Start Kit
 ## Folder structure
 
 ```
-~/assets                project resource files
+~/assets                Project resource files
 ~/components            All related component
-~/elements              Element can re-use 
 ~/constants             App constants
+  /Assets.js            Define assets variables
+  /Contants.js          Define constants value
 ~/container             App screens
+~/elements              Element can re-use 
 ~/store                 App store
   /actions                Actions
   /api                    API
   /reducers               Reducers
-~/theme                 theme: style can be re-use
+  /saga                   Config redux-saga
+  /thunk                  Config redux-thunk
+  /index.js               Config store
+~/theme                 Theme: style can be re-use
+  /Scalling.js            Scale size value for multi screen
+~/utils                 Handle logic static function
 ../App.js                Root Cotainer
 ~/routes.js             Router configuration using react-navigation
 
@@ -43,5 +50,16 @@ $ react-native link //if need)
 $ react-native run-ios //(with ios)
 $ react-native run-android //(with android)
 ```
+If you want change name project, please using https://github.com/junedomingo/react-native-rename, read document or follow below step
+Install react-native-rename is global, skip step if installed   
+```
+yarn global add react-native-rename
+or
+npm install react-native-rename -g
+```
+Rename project 
+```
+react-native-rename ProjectName -b com.example.projectname (With custom Bundle Identifier (Android). iOS using Xcode)
+```
 
-Happy Coding!
+# Happy Coding!
